@@ -6,7 +6,7 @@ My desired income is $400K a year
 My group leader's name is Jae Ale
 
 My happy place:
-![](.japanesehotspring.jpg)
+![](./Week3-092325/japanesehotspring.jpg)
 
 My favorite hobby:
-![](.Nissan-Nismo-Z-Tune-R34-GT-R.jpg)
+![](./Week3-092325/Nissan-Nismo-Z-Tune-R34-GT-R.jpg)
