@@ -1,1 +1,12 @@
 # Class7-Homework
+My nickname is Kuridango
+
+My desired income is $400K a year
+
+My group leader's name is Jae Ale
+
+My happy place:
+![](.japanesehotspring.jpg)
+
+My favorite hobby:
+![](.Nissan-Nismo-Z-Tune-R34-GT-R.jpg)
