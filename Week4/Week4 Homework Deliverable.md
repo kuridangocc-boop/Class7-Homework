@@ -138,5 +138,5 @@ Teardown:
 1. Delete Instance						
 2. Delete NAT Gateway						
 3. Delete Security Groups						
-3. Release Elastic IP A						
+3. Release Elastic IP						
 4. Delete VPCs						
