@@ -1,0 +1,13 @@
+Week4 Homework Deliverable 		
+You must define your own Network range with 3 public Subnets and 2 private subnets. Must include subnet masks		
+		
+VPC		
+10.225.0.0/16		
+		
+3-AZ		CIDR		Mask
+Public 1 	10.225.1.0/24	255.255.255.0
+Public 2 	10.225.2.0/24	255.255.255.0
+Public 3 	10.225.3.0/24	255.255.255.0
+		
+Private 1 	10.225.11.0/24	255.255.255.0
+Private 2 	10.225.12.0/24	255.255.255.0
