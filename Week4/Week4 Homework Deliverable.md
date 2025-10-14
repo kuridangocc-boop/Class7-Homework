@@ -1,11 +1,15 @@
 Week4 Class Notes 						
 								
-Network Architecture						
+Network Architecture
+
 Asia Pacific (Tokyo)						
 						
-MondayHomeworkSession-VPC (VPC ID vpc-0ac26c377ad65efac)						
-VPC Network 10.225.0.0/16						
-3 – Azs – ap-northeast (1a, 1c, 1d)						
+MondayHomeworkSession-VPC (VPC ID vpc-0ac26c377ad65efac)
+
+VPC Network 10.225.0.0/16
+
+3 – Azs – ap-northeast (1a, 1c, 1d)
+
 						
 Create Security Group		
 Public Subnets: Bastion Host		Masked Subnets		MondayHomeworkSession-Public		
