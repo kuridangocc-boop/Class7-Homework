@@ -1,3 +1,7 @@
+data "http" "userdata" {
+  url = "https://github.com/kuridangocc-boop/Class7-Homework/tree/main/scripts/Hardbody.sh"
+}
+
 resource "aws_launch_template" "web_tier" {
   description            = "launch template for web tier servers"
   image_id               = "ami-0cae6d6fe6048ca2c"
@@ -6,7 +10,7 @@ resource "aws_launch_template" "web_tier" {
   tags = {
     name = "web-tier-server-template"
   }
-  user_data = filebase64("Hardbody.sh") # need to make "file" to "filebase64"
+  user_data = base64encode(data.http.userdata.body) # need to make "file" to "filebase64"
 
   tag_specifications {
     resource_type = "instance"
