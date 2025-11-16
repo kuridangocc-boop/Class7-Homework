@@ -1,0 +1,59 @@
+class 7 (11/8/25)
+week 9 (Terraform pt 4): finishing the ASG
+
+goal = build on your existing network architecture to build an auto scaling group. This will be done in click-ops. If you were able to complete the build on Tuesday 11/4/25, you are set for today.
+
+Theo sensei:
+Talking about homework.  Lack of homework submission.
+We should be talking about homework problems a lot more.
+Be more active with homework.
+Wnat he wants to see are people going crazy over homework.
+
+spin up terraform and get screenshots of visual studio and console resource map in the chat.
+
+Create load balancer.
+Exposed, but with load balancer can hide website.  Can make to private traffic
+Lock down internal web traffic and get traffic through load balancer
+
+Create security group using same VPC using "edit" and create and name it loadbalancer and HTTP.  Put in a script.
+Next create EC2 instance using the new Security Group.
+
+Take running EC2 and going to select to actions and using image and template and create image from template.  Copy of EC2 or template
+
+Build target group, collection of ASGs, different rules for load balancer, like, IP or pictures to different ASGs or homepage.
+
+Create Load Balancer:
+Use application Load Balancer.  Classic Load Balancer is obsolete, but some companies still use it.  Future is Application Load Balancer or Network Load Balancer.
+Name it and choose Internet Facing and choose the public SGs. Get the LoadBalancer SG and select Target group that was created to direct traffic to the Target Group.  This is called "listeners".  
+A listener is a process that checks for connection requests using the port and protocol you configure. The rules that you define for a listener determine how the load balancer routes requests to its registered targets.
+
+For Scalability and Security (And reliability), but what does ASG accomplish?  IP doesn't change.  Round robin type access to each EC2 instance.
+Path and Domain Based Rules based on how you set up load balancer rules.
+
+Auto Scaling Groups:
+Amazon EC2 Auto Scaling
+helps maintain the availability of your applications
+Auto Scaling groups are collections of Amazon EC2 instances that enable automatic scaling and fleet management features. These features help you maintain the health and availability of your applications.
+
+An Auto Scaling group is a collection of Amazon EC2 instances that are treated as a logical unit. You configure settings for a group and its instances as well as define the group’s minimum, maximum, and desired capacity. Setting different minimum and maximum capacity values forms the bounds of the group, which allows the group to scale as the load on your application spikes higher or lower, based on demand. To scale the Auto Scaling group, you can either make manual adjustments to the desired capacity or let Amazon EC2 Auto Scaling automatically add and remove capacity to meet changes in demand.
+
+When launching fleets of instances, you can specify what percentage of your capacity should be fulfilled by On-Demand instances, and what percentage with Spot Instances, to save up to 90% on EC2 costs. Amazon EC2 Auto Scaling lets you provision and balance capacity across Availability Zones to optimize availability. It also provides lifecycle hooks, instance health checks, and scheduled scaling to automate capacity management.
+
+ASG, select Private SGs.
+Mininum scaling.  3 desired capability
+Scaing minimum one per AZ and max (min 2 and max 3 per AZ).
+
+min = 1 ec2 per az
+desired = 2 ec2 per az
+max = 3 ec2  per az
+
+Target tracking scaling policy
+
+Tear down process:
+1 - ASG
+2 - load balancer
+3 - Delete Target Groups
+4 - Launch Templates
+5 - EC2
+6 - Terraform destroy
+
