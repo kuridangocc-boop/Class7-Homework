@@ -1,5 +1,5 @@
 data "http" "userdata" {
-  url = "https://raw.githubusercontent.com//kuridangocc-boop/Class7-Homework/scripts/Hardbody.sh"
+  url = "https://raw.githubusercontent.com//kuridangocc-boop/Class7-Homework/main/scripts/Paradise2.sh"
 }
 
 resource "aws_launch_template" "web_tier" {
@@ -10,7 +10,7 @@ resource "aws_launch_template" "web_tier" {
   tags = {
     name = "web-tier-server-template"
   }
-  user_data = filebase64(data.http.userdata) # need to make "file" to "filebase64"
+  user_data = filebase64("data.http.userdata.body") # need to make "file" to "filebase64"
 
   tag_specifications {
     resource_type = "instance"

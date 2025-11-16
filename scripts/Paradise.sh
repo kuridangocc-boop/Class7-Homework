@@ -15,9 +15,10 @@ curl -H "X-aws-ec2-metadata-token: $TOKEN" -s http://169.254.169.254/latest/meta
 curl -H "X-aws-ec2-metadata-token: $TOKEN" -s http://169.254.169.254/latest/meta-data/network/interfaces/macs/ &> /tmp/macid &
 wait
 
-# Tropical beach background
-curl -L -o /https://github.com/kuridangocc-boop/Class7-Homework/tree/main/Images/Paradise.jpg \
-  "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600&q=85&auto=format&fit=crop"
+# Tropical Beach Background
+curl -L -o /var/www/html/images/Paradise.jpg \
+  "https://raw.githubusercontent.com/kuridangocc-boop/Class7-Homework/main/Images/Paradise.jpg"
+
 
 macid=$(cat /tmp/macid)
 local_ipv4=$(cat /tmp/local_ipv4)
@@ -33,7 +34,7 @@ echo "
    body {
     margin:0;
     font-family:Arial, Helvetica, sans-serif;
-    background:url('images/Paradise.jpg') center/cover no-repeat fixed;
+    background:(images/Paradise.jpg') center/cover no-repeat fixed;
     color:white;
     text-shadow:0 1px 4px rgba(0,0,0,0.7);
   }
@@ -81,15 +82,15 @@ echo "
 <br>
 <div class="gallery">
     <div class="card">
-      <img src="https://github.com/kuridangocc-boop/Class7-Homework/tree/main/Images/bikini-asian.gif>
+      <img src="https://raw.githubusercontent.com/kuridangocc-boop/Class7-Homework/main/Images/asian1.gif>
       <div class="caption">Japanese</div>
     </div>
     <div class="card">
-      <img src="https://github.com/kuridangocc-boop/Class7-Homework/tree/main/Images/sejinming-big-tits.gif">
+      <img src="https://raw.githubusercontent.com/kuridangocc-boop/Class7-Homework/main/Images/asian2.gif>
       <div class="caption">Korean</div>
     </div>
     <div class="card">
-      <img src="https://github.com/kuridangocc-boop/Class7-Homework/tree/main/Images/sika-cheng-beauty.gif">
+      <img src="https://raw.githubusercontent.com/kuridangocc-boop/Class7-Homework/main/Images/asian3.gif>
       <div class="caption">Chinese</div>
     </div>
   </div>
