@@ -1,8 +1,8 @@
 resource "aws_autoscaling_policy" "web_tier_cpu" {
-  name = "web-app-cpu-policy"
-  autoscaling_group_name = aws_autoscaling_group.demo-asg.name
+  name                      = "web-app-cpu-policy"
+  autoscaling_group_name    = aws_autoscaling_group.demo-asg.name
   estimated_instance_warmup = 60
-  policy_type = "TargetTrackingScaling"
+  policy_type               = "TargetTrackingScaling"
 
   target_tracking_configuration {
     predefined_metric_specification {

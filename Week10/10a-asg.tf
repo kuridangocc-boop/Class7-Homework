@@ -22,5 +22,5 @@ resource "aws_autoscaling_group" "demo-asg" {
     value               = "web-instance"
     propagate_at_launch = true
   }
-  #   enabled_metrics = ["GroupMinSize", "GroupMaxSize", "GroupDesiredCapacity", "GroupInServiceInstances", "GroupTotalInstances"]
+  enabled_metrics = ["GroupMinSize", "GroupMaxSize", "GroupDesiredCapacity", "GroupInServiceInstances", "GroupTotalInstances"]
 }
