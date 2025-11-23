@@ -1,8 +1,8 @@
 resource "aws_autoscaling_group" "demo-asg" {
   name             = "web-server-asg"
-  min_size         = 3
-  max_size         = 6
-  desired_capacity = 4
+  min_size         = 1
+  max_size         = 4
+  desired_capacity = 3
   vpc_zone_identifier = [
     aws_subnet.private_a.id,
     aws_subnet.private_b.id,

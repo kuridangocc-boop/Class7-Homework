@@ -64,7 +64,7 @@ cat <<EOF > /var/www/html/index.html
     flex-wrap:wrap;
   }
   .card {
-    flex:1 1 30%;
+    flex:1 1 45%;
     min-width:250px;
     max-width:360px;
     background:rgba(255,255,255,0.07);
@@ -72,7 +72,7 @@ cat <<EOF > /var/www/html/index.html
     overflow:hidden;
   }
   .card img {
-    width:60%;
+    width:50%;
     height:220px;
     object-fit:cover;
   }
