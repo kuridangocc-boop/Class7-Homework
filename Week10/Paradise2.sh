@@ -9,6 +9,9 @@ systemctl enable httpd
 
 # Create images folder (required for background image)
 mkdir -p /var/www/html/images
+mkdir -p /var/www/html/music
+
+
 
 # Get IMDSv2 Token
 TOKEN=$(curl -s -X PUT "http://169.254.169.254/latest/api/token" \
@@ -32,6 +35,8 @@ vpc=$(curl -s -H "X-aws-ec2-metadata-token: $TOKEN" \
 # Download background image
 curl -L -o /var/www/html/images/Paradise.jpg \
   "https://raw.githubusercontent.com/kuridangocc-boop/Class7-Homework/main/Images/Paradise.jpg"
+curl -L -o /var/www/html/music/FandF.m4a \
+  "https://raw.githubusercontent.com/kuridangocc-boop/Class7-Homework/main/Images/FandF.m4a"
 
 # Build HTML Page
 cat <<EOF > /var/www/html/index.html
@@ -92,17 +97,22 @@ cat <<EOF > /var/www/html/index.html
 
   <div class="gallery">
     <div class="card">
+      <a href="https://www.japan-experience.com" target="_blank">
       <img src="https://raw.githubusercontent.com/kuridangocc-boop/Class7-Homework/main/Images/asian1.gif">
-      <div class="caption">Japanese</div>
-    </div>
+    </a>
+    <div class="caption">Japanese</div>
+  </div>
     <div class="card">
+      <a href="https://english.visitseoul.net/index">
       <img src="https://raw.githubusercontent.com/kuridangocc-boop/Class7-Homework/main/Images/asian2.gif">
-      <div class="caption">Korean</div>
-    </div>
+    </a>
+    <div class="caption">Korean</div>
+  </div>
     <div class="card">
+      <a href="https://www.travelchina.org.cn/en">
       <img src="https://raw.githubusercontent.com/kuridangocc-boop/Class7-Homework/main/Images/asian3.gif">
-      <div class="caption">Chinese</div>
-    </div>
+    </a>
+    <div class="caption">Chinese</div>
   </div>
 </div>
 
