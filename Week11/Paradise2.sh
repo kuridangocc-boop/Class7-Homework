@@ -53,26 +53,6 @@ cat <<EOF > /var/www/html/index.html
     overflow-x:hidden;
   }
 
-  /* 🌊 Moving wave effect */
-  .wave {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at 50% 100%, rgba(0, 50, 120, 0.55), transparent 70%);
-    animation: wave 12s infinite linear;
-    opacity: 0.55;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  @keyframes wave {
-    0%   { transform: translateX(0)    translateY(0)    rotate(0deg); }
-    50%  { transform: translateX(-15%) translateY(-3%) rotate(1deg); }
-    100% { transform: translateX(0)    translateY(0)    rotate(0deg); }
-  }
-
   .overlay {
     background:rgba(0,0,0,0.35);
     padding:20px;
@@ -111,11 +91,6 @@ cat <<EOF > /var/www/html/index.html
 </style>
 </head>
 <body>
-
-<!-- 🌊 Moving ocean layer -->
-<div class="wave"></div>
-<!-- ✨ Sunlight reflections -->
-<div class="reflections"></div>
 
 
 <!-- 🎵 Looping Background Music -->
